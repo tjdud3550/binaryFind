@@ -1,9 +1,10 @@
-def open_account():
-    print("새로운 계좌가 생성되었습니다.")
-
-def deposit(balance, money):
-    print("입금이 완료 되었음, 잔액은 {0}원".format(balance + money))
-    return balance + money
-balance = 0
-balance = deposit(balance,1000)
-print(balance)
+class Unit:
+    def __init__(self,name,hp,damage):
+        self.name=name
+        self.hp=hp
+        self.damage=damage
+        print("{0} 유닛이 생성 되었습니다.".format(self.name))
+        print("체력{0}, 공격력 {1}".format(self.hp, self.damage))
+marine1 = Unit("마린",40,5)
+marine2 = Unit("마린",40,5)
+tank = Unit("탱크",150,35)
